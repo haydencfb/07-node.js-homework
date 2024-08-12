@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
+import fs from "fs";
+import generateMarkdown from "../Develop/utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -13,14 +15,8 @@ const questions = [
         {
             type: `input`,
             message: `What is the short-hand description of the project?`,
-            name: `descriptoinQuestion`
+            name: `descriptionQuestion`
         },
-        // {
-        //     type: `list`,
-        //     message: `What do you want to build?`,
-        //     choices: [`What was your motivation?`, `Why did you build this project?`, `What problem does it solve?`, `What did you learn?`],
-        //     name: `whatToBuild`
-        // },
         {
             type: `input`,
             message: `What was your motivation?`,
@@ -48,6 +44,11 @@ const questions = [
         },
         {
             type: `input`,
+            message: `How should Users use the generator?`,
+            name: `usageQuestion`
+        },
+        {
+            type: `input`,
             message: `How should Users report issues?`,
             name: `issuesQuestion`
         },
@@ -62,46 +63,38 @@ const questions = [
             name: `tableOfContentsQuestion`
         },
         {
-            type: `confirm`,
-            message: `Add license to README?`,
-            name: `licenseQuestion`
+            type: `list`,
+            message: `Choose a license for your project!`,
+            name: `licenseQuestion`,
+            choices: [`MIT`, `GNU`, `Apache`, `ISC`, `None`]
+        },
+        {
+            type: `input`,
+            message: `Who has rights to this project?`,
+            name: `rightsQuestion`
+        },
+        {
+            type: `input`,
+            message: `What is the year this project was made?`,
+            name: `yearQuestion`
         }
     ])
     .then((data) => {
-        // const title = data.titleQuestion;
-        // const description = data.descriptionQuestion;
-        // const chosenAnswer = data.whatToBuild;
-
-        // if (title === ``) {
-        //     console.log(`Please enter a valid title!`);
-        //     title.preventDefault();
-        // }
-
-        // if (description === ``) {
-        //     console.log(`Please enter a valid description!`);
-        // }
-
-        // if (chosenAnswer === `What was your motivation?`) {
-        //     console.log(`What was your motivation?`);
-        // } else if (chosenAnswer === `Why did you build this project?`) {
-        //     console.log(`Why did you build this project?`);
-        // } else if (chosenAnswer === `What problem does it solve?`) {
-        //     console.log(`What problem does it solve?`);
-        // } else if (chosenAnswer === `What did you learn?`) {
-        //     console.log(`What did you learn?`);
-        // } else {    
-        //     console.log(`Please select a valid option!`);
-        // }
+        console.log(data);
+        writeToFile(`README.md`, generateMarkdown(data));
 })
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    console.log(`File has been created!`);
+    fs.writeFileSync(fileName, data);
+    console.log(`This function is being read!`);
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+}
 
 // Function call to initialize app
 init();
