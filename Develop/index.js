@@ -15,12 +15,12 @@ const questions = [
             message: `What is the short-hand description of the project?`,
             name: `descriptoinQuestion`
         },
-        {
-            type: `list`,
-            message: `What do you want to build?`,
-            choices: [`What was your motivation?`, `Why did you build this project?`, `What problem does it solve?`, `What did you learn?`],
-            name: `whatToBuild`
-        },
+        // {
+        //     type: `list`,
+        //     message: `What do you want to build?`,
+        //     choices: [`What was your motivation?`, `Why did you build this project?`, `What problem does it solve?`, `What did you learn?`],
+        //     name: `whatToBuild`
+        // },
         {
             type: `input`,
             message: `What was your motivation?`,
@@ -97,7 +97,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    console.log(`This is the response: ${data}`);
+    console.log(`File has been created!`);
 }
 
 // TODO: Create a function to initialize app
