@@ -48,12 +48,14 @@ function renderLicenseSection(license) {
 
 function tableOfContents(tableOfContents) {
   if (tableOfContents === true) {
-    return `## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Issues](#issues)
-    - [Contributions](#contributions)
-    - [License](#license)`;
+    return `
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Issues](#issues)
+  - [Contributions](#contributions)
+  - [License](#license)
+    `;
   } else {
     return ``;
   }
