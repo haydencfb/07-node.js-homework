@@ -10,7 +10,7 @@
   
   
   ## Installation
-  f
+  The installation for this is quite simple 
 
   ## Usage
   f
