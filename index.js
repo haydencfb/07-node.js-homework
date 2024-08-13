@@ -76,9 +76,6 @@ const questions = [
             message: `What is the year this project was made?`,
             name: `yearQuestion`
         }
-//     .then((data) => {
-//         writeToFile(`README.md`, generateMarkdown(data));
-// })
 ];
 
 // TODO: Create a function to write README file
@@ -90,7 +87,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
-        writeToFile(`README.md`, generateMarkdown(data));
+        writeToFile(`./dist/README.md`, generateMarkdown(data));
     });
 }
 
