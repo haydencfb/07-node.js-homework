@@ -5,8 +5,6 @@ import generateMarkdown from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 const questions = [
-    inquirer
-    .prompt([
         {
             type: `input`,
             message: `What will be the title of your project? (This is the same name as your repository!)`,
@@ -78,22 +76,22 @@ const questions = [
             message: `What is the year this project was made?`,
             name: `yearQuestion`
         }
-    ])
-    .then((data) => {
-        console.log(data);
-        writeToFile(`README.md`, generateMarkdown(data));
-})
+//     .then((data) => {
+//         writeToFile(`README.md`, generateMarkdown(data));
+// })
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
-    console.log(`This function is being read!`);
+    console.log(`README.md is now properly generated!`);
 }
 
 // TODO: Create a function to initialize app
 function init() {
-
+    inquirer.prompt(questions).then((data) => {
+        writeToFile(`README.md`, generateMarkdown(data));
+    });
 }
 
 // Function call to initialize app
