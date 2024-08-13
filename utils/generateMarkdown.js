@@ -34,18 +34,19 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === `MIT`) {
-    return `MIT License`;
+    return `License`;
   } else if (license === `GNU`) {
-    return `GNU License`;
+    return `License`;
   } else if (license === `Apache`) {
-    return `Apache License`;
+    return `License`;
   } else if (license === `ISC`) {
-    return `ISC License`;
+    return `License`;
   } else if (license === `None`) {
     return ``;
   }
 }
 
+// This is a function that I made that handles whether or not to include a table of contents
 function tableOfContents(tableOfContents) {
   if (tableOfContents === true) {
     return `
@@ -93,7 +94,7 @@ function generateMarkdown(data) {
 
   All rights reserved, Copyright © ${data.rightsQuestion} ${data.yearQuestion}.
 
-  Licensed under the ${renderLicenseLink(data.licenseQuestion)} license.
+  Licensed under the ${renderLicenseLink(data.licenseQuestion)} ${renderLicenseSection(data.learnQuestion)}.
 `;
 }
 
