@@ -1,6 +1,6 @@
 
   # g
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  
 
   ## g
 
@@ -15,7 +15,6 @@
   - [Issues](#issues)
   - [Contributions](#contributions)
   
- - [License](#license)
   - [Tests](#tests)
   - [Questions](#questions)
 
@@ -31,8 +30,7 @@
   ## Contributions
   g
 
-  ## License
-    This project is licensed under the g license.
+  undefined
 
   ## Tests
   To run tests, run the following command: g
