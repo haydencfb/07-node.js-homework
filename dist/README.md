@@ -1,5 +1,5 @@
 
-  # g\
+  # g
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## g
@@ -35,7 +35,7 @@
     This project is licensed under the g license.
 
   ## Tests
-  To run tests, run the following command: 
+  To run tests, run the following command: g
 
   ## Questions
   If you have any questions, please feel free to reach out to me at g or visit my GitHub profile at [g]
