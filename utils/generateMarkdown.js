@@ -66,7 +66,7 @@ function generateMarkdown(data) {
   ## Contributions
   ${data.contributionsQuestion}
 
-  ${renderLicenseSection(data.learnQuestion)}
+  ${renderLicenseSection(data.licenseQuestion)}
 
   ## Tests
   To run tests, run the following command: ${data.testsQuestion}
