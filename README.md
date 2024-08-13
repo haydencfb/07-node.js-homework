@@ -10,21 +10,24 @@
   
   
   ## Installation
-  The installation for this is quite simple 
+  The installation for this is quite simple, but there are some steps. 
+  - Step 1: Clone this repository in your IDE on your local machine
+  - Step 2: Install the needed NPM Packages in the command line
+      - inquirer ("npm i inquirer")
+      - fs ("npm i fs" should already be installed)
+  - Step 3: Make sure Node.JS is installed on your local machine
+  - Step 4: You have installed!
 
   ## Usage
-  f
+  Using this is much easier than the installation process, simply just open the intergrated terminal from the "index.js" file and run the command "node index.js" and let the terminal do the rest of the work!
 
   ## Issues
-  f
-
-  ## Contributions
-  f
+  To report issues that arise during use of this generator, contact me through the email provided on my GitHub profile and I will be more than willing to help!
 
   ## License
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  All rights reserved, Copyright © f f.
+  All rights reserved, Copyright © Hayden Fitzpatrick-Brintle 2024.
 
-  Licensed under the [MIT](https://opensource.org/licenses/MIT) undefined.
+  Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
