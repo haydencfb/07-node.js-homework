@@ -30,7 +30,7 @@
   ## Contributions
   g
 
-  undefined
+  
 
   ## Tests
   To run tests, run the following command: g
