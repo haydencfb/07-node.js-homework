@@ -56,11 +56,6 @@ const questions = [
             name: `contributionsQuestion`
         },
         {
-            type: `confirm`,
-            message: `Add a table of contents?`,
-            name: `tableOfContentsQuestion`
-        },
-        {
             type: `list`,
             message: `Choose a license for your project!`,
             name: `licenseQuestion`,
@@ -68,13 +63,18 @@ const questions = [
         },
         {
             type: `input`,
-            message: `Who has rights to this project?`,
-            name: `rightsQuestion`
+            message: `Provide instructions for running code tests.`,
+            name: `testsQuestion`
         },
         {
             type: `input`,
-            message: `What is the year this project was made?`,
-            name: `yearQuestion`
+            message: `What is your email?`,
+            name: `emailQuestion`
+        },
+        {
+            type: `input`,
+            message: `What is the link to your GitHub Profile?`,
+            name: `githubQuestion`
         }
 ];
 
