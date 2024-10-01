@@ -52,7 +52,7 @@ function generateMarkdown(data) {
   - [Usage](#usage)
   - [Issues](#issues)
   - [Contributions](#contributions)
-  ${renderLicenseLink(data.licenseQuestion)}
+  - ${renderLicenseLink(data.licenseQuestion)}
   - [Tests](#tests)
   - [Questions](#questions)
 
